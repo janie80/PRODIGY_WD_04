@@ -1,0 +1,96 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #2C3E50, #FD746C);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Main Game Section */
+.game-section {
+    text-align: center;
+}
+
+.status {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cell {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+    }
+
+    .cell {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
